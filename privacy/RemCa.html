@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RemCa Privacy Policy</title>
+  <meta name="description" content="Privacy Policy for RemCa">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --card: #f8fafc;
+      --border: #e5e7eb;
+      --accent: #2563eb;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111827;
+        --text: #f3f4f6;
+        --muted: #9ca3af;
+        --card: #1f2937;
+        --border: #374151;
+        --accent: #60a5fa;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, Arial, sans-serif;
+      line-height: 1.8;
+    }
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    h1, h2 { line-height: 1.35; }
+    h1 { margin-bottom: 8px; font-size: 2rem; }
+    h2 { margin-top: 36px; font-size: 1.3rem; }
+    p, li { font-size: 1rem; }
+    .meta { color: var(--muted); margin-bottom: 28px; }
+    .notice {
+      margin: 24px 0;
+      padding: 16px 18px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    a { color: var(--accent); }
+    footer {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: .95rem;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <h1>RemCa Privacy Policy</h1>
+  <p class="meta">Last updated: September 6, 2026</p>
+
+  <div class="notice">
+    RemCa is an application that allows users to view the camera feed of one Android device
+    from another Android device on the same local network. RemCa does not send video streams
+    or authentication credentials to any external server operated by the developer as part of
+    its core functionality.
+  </div>
+
+  <h2>1. Information Used by RemCa</h2>
+  <p>RemCa may use the following information on the device in order to provide its functionality:</p>
+  <ul>
+    <li>Camera video</li>
+    <li>Local network information required to discover and connect to devices on the same LAN</li>
+    <li>An app-generated device ID used to identify RemCa installations</li>
+    <li>Display names, identifiers, and authentication information for paired devices</li>
+    <li>Connection status, communication status, camera-facing state, and other operational information</li>
+  </ul>
+
+  <h2>2. Camera Video</h2>
+  <p>
+    Camera video captured by RemCa is transmitted directly to a Viewer device selected by the user
+    on the same local network using WebRTC.
+  </p>
+  <p>
+    As part of its core functionality, RemCa does not upload camera video to any cloud service,
+    external storage service, or external video streaming service operated by the developer.
+  </p>
+
+  <h2>3. Local Network Communication</h2>
+  <p>
+    RemCa communicates over the local network in order to discover devices, perform pairing and
+    authentication, transfer video, and send camera control commands.
+  </p>
+  <p>
+    RemCa uses mDNS / DNS-SD (Android NSD) for device discovery, local TCP connections for
+    authentication and signaling, and WebRTC for video transport.
+  </p>
+
+  <h2>4. Pairing Information</h2>
+  <p>
+    RemCa stores information about paired devices on the device so that the devices can securely
+    authenticate each other during future connections.
+  </p>
+  <p>
+    Long-term pairing keys are encrypted using an app-local key protected by Android Keystore and
+    are stored only in the app's local private storage.
+  </p>
+  <p>
+    Device IDs, encrypted pairing keys, and related pairing information are excluded from normal
+    Android backup and device-transfer backups.
+  </p>
+
+  <h2>5. External Services</h2>
+  <p>
+    RemCa's core functionality does not use Firebase, an external signaling server, or external
+    STUN/TURN servers.
+  </p>
+  <p>
+    RemCa does not send camera video, pairing keys, session keys, authentication proofs, or other
+    sensitive authentication data to any external server operated by the developer.
+  </p>
+
+  <h2>6. Android Permissions</h2>
+  <p>RemCa may request or use the following permissions in order to provide its features:</p>
+  <ul>
+    <li><strong>Camera:</strong> To capture video on a Camera device</li>
+    <li><strong>Network-related permissions:</strong> To discover and connect to devices on the same LAN</li>
+    <li><strong>Foreground service:</strong> To keep the Camera device available for connections and streaming</li>
+    <li><strong>Notifications:</strong> To display the state of the Camera foreground service</li>
+    <li><strong>Wake Lock:</strong> To help keep active connection processing running reliably when needed</li>
+  </ul>
+
+  <h2>7. Sharing with Third Parties</h2>
+  <p>
+    Except where required by law, the developer does not sell or provide RemCa authentication data
+    or app-local data to third parties.
+  </p>
+
+  <h2>8. Data Deletion</h2>
+  <p>
+    Users can remove registered Cameras or Viewers from within the app to delete the related
+    pairing information.
+  </p>
+  <p>
+    Removing a Viewer from the Camera device revokes that Viewer's access to the Camera.
+  </p>
+  <p>
+    Uninstalling RemCa removes data stored in the app's local storage in accordance with the normal
+    behavior of the Android operating system.
+  </p>
+
+  <h2>9. Security</h2>
+  <p>
+    RemCa uses cryptographic authentication and encrypted communication mechanisms to protect
+    pairing, authentication, signaling, and video communication between devices.
+  </p>
+  <p>
+    However, no method of electronic communication or device storage can be guaranteed to be
+    completely secure.
+  </p>
+
+  <h2>10. Children's Privacy</h2>
+  <p>
+    RemCa is not designed for the purpose of collecting personal information from children of a
+    specific age group.
+  </p>
+
+  <h2>11. Changes to This Privacy Policy</h2>
+  <p>
+    This Privacy Policy may be updated when app functionality changes, legal requirements change,
+    or other updates become necessary. Material changes may be announced on this page or within the app.
+  </p>
+
+  <h2>12. Contact</h2>
+  <p>
+    If you have any questions about this Privacy Policy, please contact:
+  </p>
+  <p>
+    Developer: Rychee<br>
+    Email:
+    <a href="mailto:rychee2connect@gmail.com">YOUR_EMAIL@example.com</a>
+  </p>
+
+  <footer>
+    © 2026 Rychee / RemCa
+  </footer>
+</main>
+</body>
+</html>
